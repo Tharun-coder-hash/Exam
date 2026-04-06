@@ -1,3 +1,227 @@
+# DevOps + Git Complete Exam Sheet
+
+---
+
+## 1. GIT COMMANDS
+
+### Setup
+git --version  
+git config --global user.name "Your Name"  
+git config --global user.email "you@example.com"  
+
+---
+
+### Create / Clone Repo
+git init  
+git clone <repo-url>  
+
+---
+
+### Check Status
+git status  
+
+---
+
+### Add Files
+git add file.txt  
+git add .  
+
+---
+
+### Commit
+git commit -m "message"  
+git commit --amend  
+
+---
+
+### Push to GitHub
+git push origin main  
+git push -u origin main  
+
+---
+
+### Pull Changes
+git pull origin main  
+git pull origin main --rebase  
+
+---
+
+### View History
+git log  
+git log --oneline  
+git log --oneline --graph --all  
+
+---
+
+### Branching
+git branch  
+git branch new-branch  
+git checkout new-branch  
+git checkout -b new-branch  
+
+---
+
+### Merge
+git merge branch-name  
+
+---
+
+### Remote Commands
+git remote add origin <url>  
+git remote -v  
+
+---
+
+### Undo / Reset
+git restore file.txt  
+git restore --staged file.txt  
+git reset --soft HEAD~1  
+git reset --mixed HEAD~1  
+git reset --hard HEAD~1  
+git revert <commit-id>  
+
+---
+
+### Stash
+git stash  
+git stash list  
+git stash apply  
+git stash pop  
+
+---
+
+### Tagging
+git tag v1.0  
+git push origin v1.0  
+
+---
+
+## 2. MAVEN COMMANDS
+
+mvn clean test  
+mvn clean package  
+
+Output:
+target/*.jar  
+
+---
+
+## 3. DOCKER COMMANDS
+
+### Build Image
+docker build -t app-name:latest .  
+
+### List Images
+docker images  
+
+### Run Container
+docker run -p 8080:8080 app-name:latest  
+
+### Running Containers
+docker ps  
+
+### Stop Container
+docker stop <container_id>  
+
+### Logs
+docker logs <container_id>  
+
+### Remove Image
+docker rmi app-name:latest  
+
+---
+
+## 4. KUBERNETES COMMANDS
+
+### Start Cluster
+minikube start  
+
+### Connect Docker
+minikube docker-env  
+
+---
+
+### Deploy Application
+kubectl apply -f deployment.yaml  
+
+---
+
+### Check Pods
+kubectl get pods  
+
+---
+
+### Check Deployments
+kubectl get deployments  
+
+---
+
+### Debug Pod
+kubectl describe pod <pod-name>  
+
+---
+
+### Logs
+kubectl logs <pod-name>  
+
+---
+
+### Delete Deployment
+kubectl delete -f deployment.yaml  
+
+---
+
+### All Resources
+kubectl get all  
+
+---
+
+## 5. JENKINS BASIC PIPELINE
+
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy'
+            }
+        }
+    }
+}
+
+---
+
+## 6. FINAL FLOW
+
+git add  
+→ git commit  
+→ git push origin main  
+→ mvn clean package  
+→ docker build  
+→ kubectl apply  
+→ kubectl get pods  
+
+---
+
+## IMPORTANT NOTES
+
+- Git → version control  
+- Maven → build jar  
+- Docker → container image  
+- Kubernetes → runs 2 replicas  
+- Jenkins → automates pipeline  
+
+
 Here is your **FINAL COMPLETE DEVOPS FLOW (with Git + all codes)**
 Application-specific, clean, and ready to **copy in exam / README**
 
