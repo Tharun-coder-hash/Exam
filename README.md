@@ -76,7 +76,7 @@ git remote -v
 git restore file.txt  
 git restore --staged file.txt  
 git reset --soft HEAD~1  
-git reset --mixed HEAD~1  
+git reset --mixed HEAD~1
 git reset --hard HEAD~1  
 git revert <commit-id>  
 
